@@ -1,3 +1,5 @@
+{% load static %}
+
 <nav class="navbar navbar-expand-md navbar-light "  >
     <div class="container">
       {% if user.is_authenticated %}
@@ -9,13 +11,13 @@
       {% elif user.is_student %}
       <a class="navbar-brand" href="{% url 'student' %}">
              
-        <img src="{% static 'others/logo.png' %}" class="logo"  alt="" >
+        <img src="{% static 'others/logo_intelact.png' %}" class="logo"  alt="" >
     </a>
     {% endif %}
       {% else %}
       <a class="navbar-brand" href="{% url 'index' %}">
              
-        <img src="{% static 'others/logo.png' %}" class="logo"  alt="" >
+        <img src="{% static 'others/logo_intelact.png' %}" class="logo"  alt="" >
     </a>
       
       {% endif %}
